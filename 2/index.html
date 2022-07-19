@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+	<link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<style>
+		@font-face {
+			font-family: "Lato";
+			src: url('fonts/lato-italic-webfont.woff');
+		}
+		body {
+			align-items: center;
+			background: rgb(23, 121, 219);
+			color:  white;
+			display: flex;
+			font-family: 'Lato';
+			justify-content: center;
+			min-height: 100vh;
+		}
+		label {
+			font-size: 20px;
+		}
+		input, textarea {
+			background: transparent;
+			border: 1px solid white;
+			color: white;
+			font-size: 23px;
+			padding: 10px;
+			margin-top: 10px;
+			outline:  none;
+			width:  100%;
+		}
+		input[type="date"]::-webkit-calendar-picker-indicator {
+		    color: rgba(0, 0, 0, 0);
+		    opacity: 1;
+		    display: block;
+		    background: url('calendar.svg') no-repeat;
+		    width: 20px;
+		    height: 20px;
+		    border-width: thin;
+		}
+		input[type="date"] {
+			align-items: center;
+		   	display: flex;
+		   	flex-flow: row-reverse;
+		   	justify-content: space-between;
+		   	height: auto;
+		   	text-align: center;
+		}
+		textarea {
+			overflow: auto;
+			resize: none;
+		}
+		textarea::placeholder {
+			color: rgb(113, 165, 230);
+		}
+	</style>
+</head>
+<body>
+	<div style="width: 600px">
+		<form>
+		  <label for="fname">Your full given name:</label><br>
+		  <input type="text" id="fname" name="fname"><br><br>
+		  <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%">
+		  	<div>
+			  <label for="birth">Date of Birth</label><br>
+			  <input type="date" id="date" name="date"><br>
+			</div>
+			<div>
+			  <label for="citizen">Country of residence or citizenship:</label><br>
+			  <input type="text" id="citizen" name="citizen"><br>
+			</div>
+		  </div>
+		  <label for="school">What school do you plan to attend?</label><br>
+		  <input type="text" id="school" name="school"><br><br>
+
+		  <label for="details">Please take a moment to describe your intended area of study</label><br>
+		  <textarea id="details" name="details" rows="6" cols="50" placeholder="Enter details here" re></textarea>
+		</form>
+	</div>
+</body>
+</html>
